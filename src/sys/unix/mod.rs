@@ -1,3 +1,5 @@
+
+use std::prelude::v1::*;
 /// Helper macro to execute a system call that returns an `io::Result`.
 //
 // Macro must be defined before any modules that uses them.

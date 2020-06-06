@@ -7,6 +7,7 @@
 //!
 //! [portability guidelines]: ../struct.Poll.html#portability
 
+use std::prelude::v1::*;
 cfg_tcp! {
     mod tcp;
     pub use self::tcp::{TcpListener, TcpStream};

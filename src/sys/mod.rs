@@ -14,6 +14,7 @@
 //! * `tcp` and `udp` modules: see the [`crate::net`] module.
 //! * `Waker`: see [`crate::Waker`].
 
+use std::prelude::v1::*;
 cfg_os_poll! {
     macro_rules! debug_detail {
         (

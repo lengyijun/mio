@@ -1,6 +1,5 @@
 #![doc(html_root_url = "https://docs.rs/mio/0.7.0")]
 #![deny(
-    missing_docs,
     missing_debug_implementations,
     rust_2018_idioms,
     unused_imports,
@@ -36,6 +35,7 @@
 //! ## Guide
 //!
 //! A getting started guide is available in the
+
 #![cfg_attr(
     feature = "extra-docs",
     doc = "[`guide`](../mio/guide/index.html) module."
@@ -56,6 +56,10 @@
     not(feature = "extra-docs"),
     doc = "`features` (only available when the `extra-docs` feature is enabled)."
 )]
+
+#![no_std]
+extern crate sgx_tstd as std;
+
 
 // macros used internally
 #[macro_use]

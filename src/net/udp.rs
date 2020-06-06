@@ -7,6 +7,7 @@
 //!
 //! [portability guidelines]: ../struct.Poll.html#portability
 
+use std::prelude::v1::*;
 use crate::io_source::IoSource;
 use crate::{event, sys, Interest, Registry, Token};
 

@@ -32,16 +32,11 @@ uds = []
 extra-docs = []
 
 [dependencies]
-log = "0.4.8"
+log = { git = "https://github.com/mesalock-linux/log-sgx" }
 
-[target.'cfg(unix)'.dependencies]
-libc = "0.2.69"
-
-[target.'cfg(windows)'.dependencies]
-miow   = "0.3.3"
-winapi = { version = "0.3", features = ["winsock2", "mswsock"] }
-ntapi  = "0.3"
-lazy_static = "1.4.0"
+[target.'cfg(not(target_env = "sgx"))'.dependencies]
+sgx_tstd = { version = "1.0", rev = "v1.1.2", git = "https://github.com/apache/teaclave-sgx-sdk.git", features=["untrusted_fs","thread", "backtrace"] }
+sgx_libc = { version = "1.0", rev = "v1.1.2", git = "https://github.com/apache/teaclave-sgx-sdk.git" }
 
 [dev-dependencies]
 env_logger = { version = "0.6.2", default-features = false }

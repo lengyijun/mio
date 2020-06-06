@@ -1,4 +1,6 @@
+
 //! Readiness event types and utilities.
+
 
 #[allow(clippy::module_inception)]
 mod event;

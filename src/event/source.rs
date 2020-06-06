@@ -1,3 +1,5 @@
+
+use std::prelude::v1::*;
 use crate::{Interest, Registry, Token};
 
 use std::io;
